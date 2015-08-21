@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-
+gem 'passenger'
 gem 'bcrypt-ruby', '~> 3.1.2'
 gem 'bootstrap-sass'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
