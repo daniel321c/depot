@@ -10,6 +10,8 @@ class ProductsController < ApplicationController
   # GET /products/1
   # GET /products/1.json
   def show
+    @product = Product.find(params[:id])
+        render json: @product, status: :created
   end
 
   # GET /products/new
@@ -28,7 +30,8 @@ class ProductsController < ApplicationController
 
     respond_to do |format|
       if @product.save
-        format.html { redirect_to @product, notice: 'Product was successfully created.' }
+        format.html { redirect_to products_url, notice: 'Product was successfully created.' }
+        format.js
         format.json { render :show, status: :created, location: @product }
       else
         format.html { render :new }

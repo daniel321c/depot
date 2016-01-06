@@ -1,6 +1,6 @@
 <h1>Listing products</h1>
-
-<table>
+<div >
+<table id="product_list">
 <% @products.each do |product| %>
   <tr class="<%= cycle('list_line_odd', 'list_line_even') %>"> 
   <td>
@@ -21,5 +21,6 @@
 </tr>
 <% end %> 
 </table> 
+<div>
 <br />
-<%= link_to 'New product', new_product_path %>
+<%= link_to 'New product', new_product_path, id: "new_product_link", remote: true %>

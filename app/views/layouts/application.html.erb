@@ -6,6 +6,9 @@
     "data-turbolinks-track" => true %>
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
+
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD86gQbZAr2OXyFJoggpCtP2JFa9Zv66nc&callback=initMap"
+        async defer></script>
   
 </head>
 <body class="<%= controller.controller_name %>">
